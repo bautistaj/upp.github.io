@@ -1,0 +1,265 @@
+body{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #E7E1E8;
+}
+
+/*container*/
+.container{
+  margin: auto;
+  max-width: 800px;
+}
+/*container*/
+
+/*Header*/
+.header{
+  background: #2c3e50;
+}
+/*Header*/
+
+/*logo de munu*/
+.logo{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.logo img{
+  width: 60px;
+}
+
+/*logo de munu*/
+
+
+/*menu*/
+.menu{
+  color: white;
+  position: relative;
+  font-size: 22px;
+}
+.menu ul {
+  display:  inline-block;
+  position: absolute;
+  right: 0;
+  margin: 0;
+}
+.menu li {
+  display:  inline-block;
+  padding: 20px;
+}
+
+.menu li:hover {
+  /*background: #8e44ad;*/
+  background: #9b59b6;
+  border-bottom: 1px solid white;
+}
+/*menu*/
+
+
+/*Logo terapia*/
+.section{
+
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.logoterapia{
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 800px;
+  height: 375px;
+}
+
+
+
+
+
+/*Logo terapia*/
+
+
+/*Footer*/
+
+.center{
+  background: #2c3e50;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.center figure{
+  margin: auto;
+  padding: 10px
+}
+
+.logo_redes img{
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.logo_redes img:hover{
+  background: red;
+}
+/*Footer*/
+
+
+/*Descriptino*/
+.tarea{
+  position: relative;
+  margin-top: 30px;
+  border-bottom: 1px solid #4A1370;
+}
+
+.tarea h2{
+  color: #282828;
+  margin: 0;
+}
+
+
+
+.logodes{
+  background: #E6DDED;
+  display: inline-block;
+  border: 1px solid #765F84;
+
+  padding: 0;
+  margin: 0 20px 20px 0;
+}
+
+.logodes img{
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+}
+
+.description{
+  display: inline-block;
+  position: absolute;
+  text-align: justify;
+  color: #4A1370;
+}
+
+.description p{
+  font-size: 16px;
+}
+/*Descriptino*/
+
+/*Media querie*/
+@media screen and (max-width: 800px) {
+  .menu{
+    color: white;
+    position: relative;
+    font-size: 20px;
+  }
+
+  .description p{
+    font-size: 14px;
+    padding-right: 10px;
+  }
+
+  .center figure{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .header{
+    text-align: center;
+  }
+  .logo{
+    display: block;
+  }
+
+  .menu{
+    color: white;
+    position: static;
+    font-size: 22px;
+   }
+
+  .menu ul {
+    display:  block;
+    position: static;
+    padding: 0;
+  }
+
+  .menu li {
+    display:  inline-block;
+  }
+
+  .center figure{
+    padding: 0;
+  }
+
+}
+
+@media screen and (max-width: 580px) {
+  .header{
+    text-align: center;
+  }
+  .logo{
+    display: block;
+  }
+
+  .menu{
+    color: white;
+    position: static;
+    font-size: 18px;
+   }
+
+  .menu ul {
+
+    display:  block;
+    position: static;
+    padding: 10px 0 ;
+  }
+
+  .menu li {
+    display: block;
+    padding: 8px;
+    border-bottom: 1px solid white;
+  }
+
+  .menu li:first-child {
+    border-top: 1px solid white;
+  }
+
+  .center figure{
+    padding: 0;
+  }
+
+  .logo_redes img{
+   width: 50px;
+  }
+
+  .tarea{
+    position: static;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .logodes{
+    display: inline-block;
+    margin: 10px 0;
+  }
+
+  .logodes img{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .description{
+    display: block;
+    position: static;
+  }
+
+  .description p{
+    font-size: 14px;
+    position: static;
+  }
+
+  .tarea h2 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+}
