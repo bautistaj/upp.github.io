@@ -331,7 +331,7 @@ body{
    }
 
   .menu-canvas{
-    position: absolute;
+    position: fixed;
     padding: 10px 0 ;
     left: -100%;
     width: 100%;
