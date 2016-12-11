@@ -252,7 +252,7 @@ body{
 
 .menu-button{
   background: #765f84;
-  position: absolute;
+  position:  fixed;
   left: 5%;
   top: 5%;
   border-radius: 50%;
@@ -260,6 +260,7 @@ body{
   transition: .3s;
   display: none;
 }
+
 
 
 
@@ -341,7 +342,9 @@ body{
     left: 0;
   }
 
-
+  .menu-button.mostrar{
+    display: block;
+  }
 
   .menu li {
     display: block;
@@ -352,6 +355,8 @@ body{
   .menu li:first-child {
     border-top: 1px solid white;
   }
+
+
 
   .center figure{
     padding: 0;
@@ -391,10 +396,6 @@ body{
   .tarea h2 {
     text-align: center;
     font-size: 20px;
-  }
-
-  .menu-button.mostrar{
-    display: block;
   }
 
 }
