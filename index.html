@@ -109,7 +109,7 @@
        function media(){
          if(consulta.matches){
            menu.classList.add('mostrar');
-           menu.addEventListener("click", mostrarMenu);
+           menu.addEventListener("touchstart", mostrarMenu);
          }else{
            menu.removeEventListener("click", mostrarMenu);
          }
