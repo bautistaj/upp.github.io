@@ -2,88 +2,32 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Terapia Fisica</title>
     <link rel="stylesheet" href="css/upp3.css" title="css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <style>
-      @keyframes slider{
-        0%{
-          left: 0%;
-        }
-
-        10%{
-          left: 0%;
-        }
-
-        20%{
-          left: -100%;
-        }
-
-        30%{
-          left: -100%;
-        }
-
-        40%{
-          left: -200%;
-        }
-
-        50%{
-          left: -200%;
-        }
-
-        60%{
-          left: -300%;
-        }
-
-        70%{
-          left: -300%;
-        }
-
-        80%{
-          left: -400%;
-        }
-
-        90%{
-          left: -400%;
-        }
-      }
-
-      #slider{
-        overflow: hidden;
-      }
-
-      #slider figure img{
-        width: 20%;
-        float: left;
-      }
-
-      #slider figure{
-        z-index: -100;
-        position: relative;
-        width: 500%;
-        margin: 0;
-        left: 0;
-        animation: 20s slider infinite;
-      }
-    </style>
   </head>
 
   <body>
 
     <div class="header">
+
       <header class="container">
         <nav class="menu">
+
           <figure class="logo">
             <img src="img/logo.png" alt="">
           </figure>
 
-          <ul>
+          <ul class="menu-canvas" id="menu-canvas">
             <li>Opción0</li>
             <li>Opción1</li>
             <li>Opción2</li>
             <li>Opción3</li>
           </ul>
+
+          <span class="menu-button icon-menu" id="menu"></samp>
         </nav>
       </header>
   </div>
@@ -136,6 +80,7 @@
       <div class="description">
         <h2>Titulo</h2>
         <p>
+
         industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.
         </p>
       </div>
@@ -152,5 +97,27 @@
         </p>
       </div>
     </section>
+
+    <script>
+       var consulta = window.matchMedia('(max-width: 580px)');
+       var menuCanvas = document.getElementById('menu-canvas');
+       var menu = document.getElementById('menu');
+
+
+       consulta.addListener(media);
+
+       function media(){
+         if(consulta.matches){
+           menu.classList.add('mostrar');
+           menu.addEventListener("click", mostrarMenu);
+         }else{
+           menu.removeEventListener("click", mostrarMenu);
+         }
+       }
+       function mostrarMenu(){
+         menuCanvas.classList.toggle('active');
+         menu.classList.toggle('icon-close');
+       }
+    </script>
   </body>
 </html>

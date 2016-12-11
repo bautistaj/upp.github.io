@@ -1,7 +1,112 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/fonts/icomoon.eot?dry7p6');
+  src:  url('../fonts/fonts/icomoon.eot?dry7p6#iefix') format('embedded-opentype'),
+    url('../fonts/fonts/icomoon.ttf?dry7p6') format('truetype'),
+    url('../fonts/fonts/icomoon.woff?dry7p6') format('woff'),
+    url('../fonts/fonts/icomoon.svg?dry7p6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-close:before {
+  content: "\ea0d";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+
 body{
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background: #E7E1E8;
+}
+
+
+/* SLIDER*/
+
+@keyframes slider{
+  0%{
+    left: 0%;
+  }
+
+  10%{
+    left: 0%;
+  }
+
+  20%{
+    left: -100%;
+  }
+
+  30%{
+    left: -100%;
+  }
+
+  40%{
+    left: -200%;
+  }
+
+  50%{
+    left: -200%;
+  }
+
+  60%{
+    left: -300%;
+  }
+
+  70%{
+    left: -300%;
+  }
+
+  80%{
+    left: -400%;
+  }
+
+  90%{
+    left: -400%;
+  }
+}
+
+#slider{
+  overflow: hidden;
+}
+
+#slider figure img{
+  width: 20%;
+  float: left;
+}
+
+#slider figure{
+  z-index: -100;
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
 }
 
 /*container*/
@@ -36,7 +141,7 @@ body{
   position: relative;
   font-size: 22px;
 }
-.menu ul {
+.menu-canvas {
   display:  inline-block;
   position: absolute;
   right: 0;
@@ -143,6 +248,21 @@ body{
 }
 /*Descriptino*/
 
+
+
+.menu-button{
+  background: #765f84;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  border-radius: 50%;
+  padding: 10px;
+  transition: .3s;
+  display: none;
+}
+
+
+
 /*Media querie*/
 @media screen and (max-width: 800px) {
   .menu{
@@ -175,7 +295,7 @@ body{
     font-size: 22px;
    }
 
-  .menu ul {
+  .menu-canvas  {
     display:  block;
     position: static;
     padding: 0;
@@ -205,12 +325,23 @@ body{
     font-size: 18px;
    }
 
-  .menu ul {
-
-    display:  block;
-    position: static;
+  .menu-canvas{
+    position: absolute;
     padding: 10px 0 ;
+    left: -100%;
+    width: 100%;
+    top: 0;
+    background: rgba(155, 89, 182,.8);
+    bottom: 0;
+    transition: .3s;
+    padding: 60px 0;
   }
+
+  .menu-canvas.active{
+    left: 0;
+  }
+
+
 
   .menu li {
     display: block;
@@ -260,6 +391,10 @@ body{
   .tarea h2 {
     text-align: center;
     font-size: 20px;
+  }
+
+  .menu-button.mostrar{
+    display: block;
   }
 
 }
