@@ -126,8 +126,8 @@
          menu.classList.add('icon-close');
        }
        function mOcultar(){
-         menuCanvas.classList.add('active');
-         menu.classList.add('icon-close');
+         menuCanvas.classList.remove('active');
+         menu.classList.remove('icon-close');
        }
 
        media();
@@ -140,8 +140,8 @@
        /* gestos touch*/
        var body = document.body;
        var gestos = new Hammer(body);
-         gestos.on('swipeleft', mMenu);
-         gestos.on('swiperigth', mOcultar);
+         gestos.on('swipeleft', mOcultar);
+         gestos.on('swiperight', mMenu);
     </script>
   </body>
 </html>
