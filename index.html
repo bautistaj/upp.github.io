@@ -49,21 +49,21 @@
   </div>
     <div class="center container">
       <figure class="logo_redes">
-        <img src="img/flat_social_icons/Flat_Social_Style_03/PNG/64/01_twitter.png" alt="">
+        <img data-src="img/flat_social_icons/Flat_Social_Style_03/PNG/64/01_twitter.png" alt="">
       </figure>
 
       <figure class="logo_redes">
-        <img src="img/flat_social_icons/Flat_Social_Style_03/PNG/64/02_facebook.png" alt="">
+        <img data-src="img/flat_social_icons/Flat_Social_Style_03/PNG/64/02_facebook.png" alt="">
       </figure>
 
       <figure class="logo_redes">
-        <img src="img/flat_social_icons/Flat_Social_Style_03/PNG/64/03_youtube.png" alt="">
+        <img data-src="img/flat_social_icons/Flat_Social_Style_03/PNG/64/03_youtube.png" alt="">
       </figure>
     </div>
 
     <section class="tarea container">
       <figure class="logodes">
-        <img src="img/logoterapia.png" alt="" />
+        <img data-src="img/logoterapia.png" alt="" />
       </figure>
       <div class="description">
         <h2>Titulo</h2>
@@ -75,7 +75,7 @@
 
     <section class="tarea container">
       <figure class="logodes">
-        <img src="img/logoterapia.png" alt="" />
+        <img data-src="img/logoterapia.png" alt="" />
       </figure>
       <div class="description">
         <h2>Titulo</h2>
@@ -88,7 +88,7 @@
 
     <section class="tarea container">
       <figure class="logodes">
-        <img src="img/logoterapia.png" alt="" />
+        <img data-src="img/logoterapia.png" alt="" />
       </figure>
       <div class="description">
         <h2>Titulo</h2>
@@ -98,7 +98,10 @@
       </div>
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
     <script>
+
        var consulta = window.matchMedia('(max-width: 580px)');
        var menuCanvas = document.getElementById('menu-canvas');
        var menu = document.getElementById('menu');
@@ -110,13 +113,35 @@
          if(consulta.matches){
            menu.addEventListener("touchstart", mostrarMenu);
          }else{
-           menu.removeEventListener("click", mostrarMenu);
+           menu.removeEventListener("touchstart", mostrarMenu);
          }
        }
+
        function mostrarMenu(){
          menuCanvas.classList.toggle('active');
          menu.classList.toggle('icon-close');
        }
+       function mMenu(){
+         menuCanvas.classList.add('active');
+         menu.classList.add('icon-close');
+       }
+       function mOcultar(){
+         menuCanvas.classList.add('active');
+         menu.classList.add('icon-close');
+       }
+
+       media();
+
+       var bLazy = new Blazy({
+           selector: 'img'
+       });
+
+
+       /* gestos touch*/
+       var body = document.body;
+       var gestos = new Hammer(body);
+         gestos.on('swipeleft', mMenu);
+         gestos.on('swiperigth', mOcultar);
     </script>
   </body>
 </html>
