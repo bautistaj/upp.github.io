@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Terapia Fisica</title>
-    <link rel="stylesheet" href="css/upp3.css" title="css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
 
   <body>
@@ -63,7 +61,7 @@
 
     <section class="tarea container">
       <figure class="logodes">
-        <img data-src="img/logoterapia.png" alt="" />
+        <img src="img/logoterapia.png" alt="" />
       </figure>
       <div class="description">
         <h2>Titulo</h2>
@@ -75,7 +73,7 @@
 
     <section class="tarea container">
       <figure class="logodes">
-        <img data-src="img/logoterapia.png" alt="" />
+        <img src="img/logoterapia.png" alt="" />
       </figure>
       <div class="description">
         <h2>Titulo</h2>
@@ -88,7 +86,7 @@
 
     <section class="tarea container">
       <figure class="logodes">
-        <img data-src="img/logoterapia.png" alt="" />
+        <img src="img/logoterapia.png" alt="" />
       </figure>
       <div class="description">
         <h2>Titulo</h2>
@@ -97,10 +95,16 @@
         </p>
       </div>
     </section>
-
+    <link rel="stylesheet" href="css/upp.min.css" title="css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+
     <script>
+    WebFont.load({
+       google: {
+          families: ['Montserrat', 'Allerta']
+        }  });
 
        var consulta = window.matchMedia('(max-width: 580px)');
        var menuCanvas = document.getElementById('menu-canvas');
